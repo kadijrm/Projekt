@@ -13,25 +13,25 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Katse extends Application {
+public class KÃ¼simused extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws FileNotFoundException {
 		BorderPane juur = new BorderPane();
 	    java.io.File fail = new java.io.File("c:/Users/Kadi/workspace/oop/Projekt2/src/kysimused.txt");
 		java.util.Scanner sc = new java.util.Scanner(fail);
-		ArrayList<String> küsimused = new ArrayList<String>();
+		ArrayList<String> kÃ¼simused = new ArrayList<String>();
 		ArrayList<String> vastused = new ArrayList<String>();
 		while (sc.hasNextLine()) {
 		    String rida = sc.nextLine();
-		    küsimused.add(rida);
+		    kÃ¼simused.add(rida);
 		}
 		double x = 20.0;
 		double y = 20.0;
 		for(int i = 0; i < 35; i++){
 			VBox vbox = new VBox(5);
 			vbox.setPadding(new Insets(x, 50, 50, y));
-			Text kysimus = new Text(0, 0, küsimused.get(i));
+			Text kysimus = new Text(0, 0, kÃ¼simused.get(i));
 			juur.getChildren().add(kysimus);
 
 			ToggleGroup grupp = new ToggleGroup();
@@ -55,7 +55,7 @@ public class Katse extends Application {
 		//Button nupp = new Button("Valmis");
 		//juur.getChildren().add(nupp);
 		Scene stseen = new Scene(juur, 800, 500, Color.WHITE);
-	    primaryStage.setTitle("Ülitundlikkuse test");
+	    primaryStage.setTitle("Ãœlitundlikkuse test");
 	    primaryStage.setScene(stseen);
 	    primaryStage.show();
 	   
